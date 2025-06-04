@@ -42,5 +42,9 @@ void PeasMainWindow::initUi()
 	ui->layout_display->addWidget(d_ptr->m_widget);
 	ui->layout_statusbar->addWidget(d_ptr->m_widget1);
 
+	d_ptr->m_titlebar->setMouseTracking(true);
+	d_ptr->m_directoryWidget->setMouseTracking(true);
+	d_ptr->m_widget->setMouseTracking(true);
+	d_ptr->m_widget1->setMouseTracking(true);
 }
 

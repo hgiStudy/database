@@ -4,5 +4,7 @@
         <file>state/language.svg</file>
         <file>state/max.png</file>
         <file>state/min.png</file>
+        <file>state/logo.png</file>
+        <file>state/logo.svg</file>
     </qresource>
 </RCC>

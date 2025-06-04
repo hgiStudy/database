@@ -34,13 +34,13 @@
      <property name="minimumSize">
       <size>
        <width>64</width>
-       <height>22</height>
+       <height>35</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>64</width>
-       <height>22</height>
+       <height>35</height>
       </size>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -61,17 +61,26 @@
         <property name="minimumSize">
          <size>
           <width>24</width>
-          <height>18</height>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>24</width>
-          <height>18</height>
+          <height>24</height>
          </size>
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="../../../../../Database.qrc">:/Database/state/logo.svg</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -155,7 +164,7 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="btn_login">
         <property name="text">
          <string>Login</string>
         </property>
@@ -198,7 +207,7 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QToolButton" name="toolButton">
+       <widget class="QToolButton" name="btn_language">
         <property name="minimumSize">
          <size>
           <width>40</width>
@@ -260,7 +269,7 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="btn_min">
         <property name="text">
          <string/>
         </property>
@@ -277,7 +286,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="btn_max">
         <property name="text">
          <string/>
         </property>
@@ -327,7 +336,7 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="btn_exit">
         <property name="text">
          <string/>
         </property>

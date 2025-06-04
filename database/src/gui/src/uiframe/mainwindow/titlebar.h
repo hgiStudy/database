@@ -12,6 +12,10 @@ public:
 	TitleBar(QWidget *parent = nullptr);
 	~TitleBar();
 
+private slots:
+	void on_btn_min_clicked();
+	void on_btn_max_clicked();
+	void on_btn_exit_clicked();
 private:
 	Ui::TitleBarClass ui;
 };
