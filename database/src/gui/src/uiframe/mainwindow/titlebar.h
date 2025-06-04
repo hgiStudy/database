@@ -12,6 +12,10 @@ public:
 	TitleBar(QWidget *parent = nullptr);
 	~TitleBar();
 
+
+protected:
+	void resizeEvent(QResizeEvent* event)override;
+
 private slots:
 	void on_btn_min_clicked();
 	void on_btn_max_clicked();

@@ -6,5 +6,6 @@
         <file>state/min.png</file>
         <file>state/logo.png</file>
         <file>state/logo.svg</file>
+        <file>state/zoom.png</file>
     </qresource>
 </RCC>
