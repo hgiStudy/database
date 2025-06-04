@@ -65,7 +65,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)database\src\gui\src\uiframe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)database\src\gui\src\uiframe;$(SolutionDir)database\deps;$(SolutionDir)database\src\gui\src\uiframe\mainwindow;$(SolutionDir)database\src\gui\src\uiframe\directory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -102,18 +102,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deps\framelesswidget.cpp" />
     <ClCompile Include="src\gui\src\uiframe\databasewidget.cpp" />
-    <ClCompile Include="src\gui\src\uiframe\doudoumainwindow.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\directory\directorywidget.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\directory\navigationwidget.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\mainwindow\peasmainwindow.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\mainwindow\titlebar.cpp" />
     <QtRcc Include="Database.qrc" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="deps\framelesswidget.ui" />
     <QtUic Include="src\gui\src\uiframe\databasewidget.ui" />
-    <QtUic Include="src\gui\src\uiframe\doudoumainwindow.ui" />
+    <QtUic Include="src\gui\src\uiframe\mainwindow\peasmainwindow.ui" />
+    <QtUic Include="src\gui\src\uiframe\mainwindow\titlebar.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\databasewidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="src\gui\src\uiframe\doudoumainwindow.h" />
+    <QtMoc Include="deps\framelesswidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\mainwindow\peasmainwindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\mainwindow\titlebar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\directory\directorywidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\directory\navigationwidget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

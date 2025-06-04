@@ -1,10 +1,10 @@
-#include "doudoumainwindow.h"
+#include "peasmainwindow.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    DouDouMainWindow w;
+    PeasMainWindow w;
     w.show();
     return a.exec();
 }

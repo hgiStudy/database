@@ -1,23 +1,21 @@
-#include "doudoumainwindow.h"
-#include <QDebug>
+#include "framelesswidget.h"
 
-DouDouMainWindow::DouDouMainWindow(QWidget *parent)
-	: QMainWindow(parent)
+FramelessWidget::FramelessWidget(QWidget *parent)
+	: QWidget(parent)
 {
 	ui.setupUi(this);
-    isLeftPressDown = false;
-    this->dir = NONE;
-	//去掉标题栏，工具栏，窗口置顶
+	isLeftPressDown = false;
+	this->dir = NONE;
+	//去掉标题栏，工具栏
 	setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);
+	setMouseTracking(true);
 
-    setMouseTracking(true);
-    centralWidget()->setMouseTracking(true);
 }
 
-DouDouMainWindow::~DouDouMainWindow()
+FramelessWidget::~FramelessWidget()
 {}
 
-void DouDouMainWindow::region(const QPoint& currentGlobalPoint)
+void FramelessWidget::region(const QPoint& currentGlobalPoint)
 {
     QRect rect = this->rect();
     QPoint tl = mapToGlobal(rect.topLeft());
@@ -75,7 +73,7 @@ void DouDouMainWindow::region(const QPoint& currentGlobalPoint)
 
 //三个鼠标事件的重写
 //鼠标按下事件
-void DouDouMainWindow::mousePressEvent(QMouseEvent* event)
+void FramelessWidget::mousePressEvent(QMouseEvent* event)
 {
     switch (event->button())
     {
@@ -96,14 +94,14 @@ void DouDouMainWindow::mousePressEvent(QMouseEvent* event)
         this->setWindowState(Qt::WindowMinimized);
         break;
     default:
-        QMainWindow::mousePressEvent(event);
+        QWidget::mousePressEvent(event);
     }
 }
 
 
 
 //鼠标移动事件
-void DouDouMainWindow::mouseMoveEvent(QMouseEvent* event)
+void FramelessWidget::mouseMoveEvent(QMouseEvent* event)
 {
     QPoint gloPoint = event->globalPos();
     QRect rect = this->rect();
@@ -170,12 +168,12 @@ void DouDouMainWindow::mouseMoveEvent(QMouseEvent* event)
             event->accept();
         }
     }
-    QMainWindow::mouseMoveEvent(event);
+    QWidget::mouseMoveEvent(event);
 }
 
 
 //鼠标释放事件
-void DouDouMainWindow::mouseReleaseEvent(QMouseEvent* event)
+void FramelessWidget::mouseReleaseEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton)
     {

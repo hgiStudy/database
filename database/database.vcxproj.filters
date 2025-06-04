@@ -22,6 +22,18 @@
     <Filter Include="gui\uiframe\settingpage">
       <UniqueIdentifier>{0eec58dd-1886-4763-9e47-02a6c4eb297e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="deps">
+      <UniqueIdentifier>{cd2a4113-c5aa-4316-99ce-ba98ea57f05b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\uiframe\mainwindow">
+      <UniqueIdentifier>{d4cc05ae-4c7d-4161-8209-fe118c10b2f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\uiframe\titlebar">
+      <UniqueIdentifier>{1fad705e-2b39-4f77-9473-ddab75983941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\uiframe\directory">
+      <UniqueIdentifier>{4b826412-d36c-410a-b211-a07cdced173d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Database.qrc">
@@ -35,24 +47,54 @@
     <ClCompile Include="src\gui\src\uiframe\databasewidget.cpp">
       <Filter>gui\uiframe\settingpage</Filter>
     </ClCompile>
-    <ClCompile Include="src\gui\src\uiframe\doudoumainwindow.cpp">
-      <Filter>gui\uiframe\settingpage</Filter>
+    <ClCompile Include="deps\framelesswidget.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\mainwindow\peasmainwindow.cpp">
+      <Filter>gui\uiframe\mainwindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\mainwindow\titlebar.cpp">
+      <Filter>gui\uiframe\titlebar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\directory\directorywidget.cpp">
+      <Filter>gui\uiframe\directory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\directory\navigationwidget.cpp">
+      <Filter>gui\uiframe\directory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\gui\src\uiframe\databasewidget.ui">
       <Filter>gui\uiframe\settingpage</Filter>
     </QtUic>
-    <QtUic Include="src\gui\src\uiframe\doudoumainwindow.ui">
-      <Filter>gui\uiframe\settingpage</Filter>
+    <QtUic Include="deps\framelesswidget.ui">
+      <Filter>deps</Filter>
+    </QtUic>
+    <QtUic Include="src\gui\src\uiframe\mainwindow\peasmainwindow.ui">
+      <Filter>gui\uiframe\mainwindow</Filter>
+    </QtUic>
+    <QtUic Include="src\gui\src\uiframe\mainwindow\titlebar.ui">
+      <Filter>gui\uiframe\titlebar</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\databasewidget.h">
       <Filter>gui\uiframe\settingpage</Filter>
     </QtMoc>
-    <QtMoc Include="src\gui\src\uiframe\doudoumainwindow.h">
-      <Filter>gui\uiframe\settingpage</Filter>
+    <QtMoc Include="deps\framelesswidget.h">
+      <Filter>deps</Filter>
+    </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\mainwindow\peasmainwindow.h">
+      <Filter>gui\uiframe\mainwindow</Filter>
+    </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\mainwindow\titlebar.h">
+      <Filter>gui\uiframe\titlebar</Filter>
+    </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\directory\directorywidget.h">
+      <Filter>gui\uiframe\directory</Filter>
+    </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\directory\navigationwidget.h">
+      <Filter>gui\uiframe\directory</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

@@ -1,4 +1,8 @@
 <RCC>
-    <qresource prefix="Database">
+    <qresource prefix="/Database">
+        <file>state/close.png</file>
+        <file>state/language.svg</file>
+        <file>state/max.png</file>
+        <file>state/min.png</file>
     </qresource>
 </RCC>
