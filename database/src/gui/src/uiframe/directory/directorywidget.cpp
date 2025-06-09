@@ -26,5 +26,7 @@ void DirectoryWidget::initUi()
 
     setLayout(m_mainLayout);
     m_mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    connect(m_navigationWidget, &NavigationWidget::currentItemChanged, this, &DirectoryWidget::currentItemChanged);
 }
 

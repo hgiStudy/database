@@ -34,6 +34,9 @@
     <Filter Include="gui\uiframe\directory">
       <UniqueIdentifier>{4b826412-d36c-410a-b211-a07cdced173d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui\uiframe\manager">
+      <UniqueIdentifier>{c2af9d07-f76d-4eed-a72b-878871333093}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Database.qrc">
@@ -47,9 +50,6 @@
     <ClCompile Include="src\gui\src\uiframe\databasewidget.cpp">
       <Filter>gui\uiframe\settingpage</Filter>
     </ClCompile>
-    <ClCompile Include="deps\framelesswidget.cpp">
-      <Filter>deps</Filter>
-    </ClCompile>
     <ClCompile Include="src\gui\src\uiframe\mainwindow\peasmainwindow.cpp">
       <Filter>gui\uiframe\mainwindow</Filter>
     </ClCompile>
@@ -62,13 +62,25 @@
     <ClCompile Include="src\gui\src\uiframe\directory\navigationwidget.cpp">
       <Filter>gui\uiframe\directory</Filter>
     </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\settingpage\settingwidget.cpp">
+      <Filter>gui\uiframe\settingpage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\src\uiframe\manager\displaywidget.cpp">
+      <Filter>gui\uiframe\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qframeless\qframelesshelper.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qframeless\qframelesswidget.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qframeless\qshadowhelper.cpp">
+      <Filter>deps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\gui\src\uiframe\databasewidget.ui">
       <Filter>gui\uiframe\settingpage</Filter>
-    </QtUic>
-    <QtUic Include="deps\framelesswidget.ui">
-      <Filter>deps</Filter>
     </QtUic>
     <QtUic Include="src\gui\src\uiframe\mainwindow\peasmainwindow.ui">
       <Filter>gui\uiframe\mainwindow</Filter>
@@ -76,13 +88,16 @@
     <QtUic Include="src\gui\src\uiframe\mainwindow\titlebar.ui">
       <Filter>gui\uiframe\titlebar</Filter>
     </QtUic>
+    <QtUic Include="src\gui\src\uiframe\settingpage\settingwidget.ui">
+      <Filter>gui\uiframe\settingpage</Filter>
+    </QtUic>
+    <QtUic Include="src\gui\src\uiframe\manager\displaywidget.ui">
+      <Filter>gui\uiframe\manager</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\databasewidget.h">
       <Filter>gui\uiframe\settingpage</Filter>
-    </QtMoc>
-    <QtMoc Include="deps\framelesswidget.h">
-      <Filter>deps</Filter>
     </QtMoc>
     <QtMoc Include="src\gui\src\uiframe\mainwindow\peasmainwindow.h">
       <Filter>gui\uiframe\mainwindow</Filter>
@@ -96,5 +111,25 @@
     <QtMoc Include="src\gui\src\uiframe\directory\navigationwidget.h">
       <Filter>gui\uiframe\directory</Filter>
     </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\settingpage\settingwidget.h">
+      <Filter>gui\uiframe\settingpage</Filter>
+    </QtMoc>
+    <QtMoc Include="src\gui\src\uiframe\manager\displaywidget.h">
+      <Filter>gui\uiframe\manager</Filter>
+    </QtMoc>
+    <QtMoc Include="deps\qframeless\qframelesshelper.h">
+      <Filter>deps</Filter>
+    </QtMoc>
+    <QtMoc Include="deps\qframeless\qframelesswidget.h">
+      <Filter>deps</Filter>
+    </QtMoc>
+    <QtMoc Include="deps\qframeless\qshadowhelper.h">
+      <Filter>deps</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="peasdefine.h">
+      <Filter>gui\uiframe\manager</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

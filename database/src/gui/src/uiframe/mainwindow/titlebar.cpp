@@ -11,21 +11,10 @@ TitleBar::TitleBar(QWidget *parent)
 TitleBar::~TitleBar()
 {}
 
-
-void TitleBar::resizeEvent(QResizeEvent* event)
+void TitleBar::updateMaxBtnState()
 {
-    QSize size = parentWidget()->size();
-    // 获取主屏幕大小
-    QScreen* primaryScreen = QGuiApplication::primaryScreen();
-    QSize screenSize = primaryScreen->size();
-
-
-    if (size.width() < screenSize.width()) {
-        ui.btn_max->setIcon(QIcon(":/Database/state/max.png"));
-    }
-    else {
-        ui.btn_max->setIcon(QIcon(":/Database/state/zoom.png"));
-    }
+    ui.btn_max->setIcon(
+        QIcon(parentWidget()->isMaximized() ? ":/Database/state/zoom.png" : ":/Database/state/max.png"));
 }
 
 void TitleBar::on_btn_min_clicked()

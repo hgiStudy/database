@@ -65,7 +65,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)database\src\gui\src\uiframe;$(SolutionDir)database\deps;$(SolutionDir)database\src\gui\src\uiframe\mainwindow;$(SolutionDir)database\src\gui\src\uiframe\directory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)database\src\gui\src\uiframe;$(SolutionDir)database\deps;$(SolutionDir)database\src\gui\src\uiframe\mainwindow;$(SolutionDir)database\src\gui\src\uiframe\directory;$(SolutionDir)database\src\gui\src\uiframe\manager;$(SolutionDir)database\src\gui\src\uiframe\settingpage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -102,24 +102,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="deps\framelesswidget.cpp" />
+    <ClCompile Include="deps\qframeless\qframelesshelper.cpp" />
+    <ClCompile Include="deps\qframeless\qframelesswidget.cpp" />
+    <ClCompile Include="deps\qframeless\qshadowhelper.cpp" />
     <ClCompile Include="src\gui\src\uiframe\databasewidget.cpp" />
     <ClCompile Include="src\gui\src\uiframe\directory\directorywidget.cpp" />
     <ClCompile Include="src\gui\src\uiframe\directory\navigationwidget.cpp" />
     <ClCompile Include="src\gui\src\uiframe\mainwindow\peasmainwindow.cpp" />
     <ClCompile Include="src\gui\src\uiframe\mainwindow\titlebar.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\manager\displaywidget.cpp" />
+    <ClCompile Include="src\gui\src\uiframe\settingpage\settingwidget.cpp" />
     <QtRcc Include="Database.qrc" />
     <ClCompile Include="main.cpp" />
-    <QtUic Include="deps\framelesswidget.ui" />
     <QtUic Include="src\gui\src\uiframe\databasewidget.ui" />
     <QtUic Include="src\gui\src\uiframe\mainwindow\peasmainwindow.ui" />
     <QtUic Include="src\gui\src\uiframe\mainwindow\titlebar.ui" />
+    <QtUic Include="src\gui\src\uiframe\manager\displaywidget.ui" />
+    <QtUic Include="src\gui\src\uiframe\settingpage\settingwidget.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\databasewidget.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="deps\framelesswidget.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\mainwindow\peasmainwindow.h" />
@@ -132,6 +134,18 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\gui\src\uiframe\directory\navigationwidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\settingpage\settingwidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gui\src\uiframe\manager\displaywidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="deps\qframeless\qshadowhelper.h" />
+    <QtMoc Include="deps\qframeless\qframelesswidget.h" />
+    <QtMoc Include="deps\qframeless\qframelesshelper.h" />
+    <ClInclude Include="peasdefine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

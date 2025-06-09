@@ -1,8 +1,8 @@
 <UI version="4.0" >
- <class>FramelessWidgetClass</class>
- <widget class="QWidget" name="FramelessWidgetClass" >
+ <class>DisplayWidgetClass</class>
+ <widget class="QWidget" name="DisplayWidgetClass" >
   <property name="objectName" >
-   <string notr="true">FramelessWidgetClass</string>
+   <string notr="true">DisplayWidgetClass</string>
   </property>
   <property name="geometry" >
    <rect>
@@ -13,7 +13,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>FramelessWidget</string>
+   <string>DisplayWidget</string>
   </property>$centralwidget$
  </widget>
  <layoutDefault spacing="6" margin="11" />

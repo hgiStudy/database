@@ -16,6 +16,9 @@ public:
 	~DirectoryWidget();
 	void initUi();
 
+signals:
+	void currentItemChanged(const int& index);
+
 private:
 	QVBoxLayout* m_rightLayout = nullptr;
 	QVBoxLayout* m_mainLayout = nullptr;
